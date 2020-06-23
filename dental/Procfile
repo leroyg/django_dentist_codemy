@@ -1,1 +1,1 @@
-web: sh -c 'cd ./dental/ && exec gunicorn dental.wsgi --log-file -'
+web: gunicorn --pythonpath dental dental.wsgi --logfile
