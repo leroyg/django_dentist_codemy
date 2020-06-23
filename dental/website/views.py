@@ -20,7 +20,7 @@ def contact(request):
             message,  # message
             message_email,  # from email;
             ['testemail@tester.com'],  # to email
-            fail_silently=False,
+            fail_silently=True,
         )
 
         return render(request, 'contact.html', {'message_name': message_name})
