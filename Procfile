@@ -1,1 +1,1 @@
-web: gunicorn dental.wsgi --logfile
+web: gunicorn dental.wsgi
