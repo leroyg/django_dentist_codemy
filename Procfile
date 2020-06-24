@@ -1,1 +1,1 @@
-web: gunicorn -pythonpath djangodental dental.wsgi
+web: gunicorn -pythonpath djangodental dental dental.wsgi
