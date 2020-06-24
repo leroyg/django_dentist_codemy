@@ -44,3 +44,45 @@ It returns this in my console
 Scaling dynos... !
  ▸    Couldn't find that process type (web).
 
+
+
+- Moved Procfile to root
+New error 
+
+2020-06-24T15:07:57.000000+00:00 app[api]: Build succeeded
+2020-06-24T15:09:29.727267+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=drdentalwork.herokuapp.com request_id=a0033447-1a5d-4ba1-8390-78a9e523a72a fwd="41.189.247.5" dyno= connect= service= status=503 bytes= protocol=https
+2020-06-24T15:12:48.655622+00:00 heroku[web.1]: State changed from crashed to starting
+2020-06-24T15:12:59.675267+00:00 heroku[web.1]: Starting process with command `gunicorn -pythonpath dental dental.wsgi`
+2020-06-24T15:13:02.473019+00:00 heroku[web.1]: Process exited with status 4
+2020-06-24T15:13:02.514523+00:00 heroku[web.1]: State changed from starting to crashed
+2020-06-24T15:13:02.238931+00:00 app[web.1]: [2020-06-24 15:13:02 +0000] [4] [INFO] Starting gunicorn 20.0.0
+2020-06-24T15:13:02.240388+00:00 app[web.1]: [2020-06-24 15:13:02 +0000] [4] [INFO] Listening at: http://0.0.0.0:59531 (4)
+2020-06-24T15:13:02.240500+00:00 app[web.1]: [2020-06-24 15:13:02 +0000] [4] [INFO] Using worker: sync
+2020-06-24T15:13:02.244680+00:00 app[web.1]: [2020-06-24 15:13:02 +0000] [11] [INFO] Booting worker with pid: 11
+2020-06-24T15:13:02.249408+00:00 app[web.1]: Failed to find application object 'application' in 'dental'
+2020-06-24T15:13:02.249652+00:00 app[web.1]: [2020-06-24 15:13:02 +0000] [11] [INFO] Worker exiting (pid: 11)
+2020-06-24T15:13:02.276309+00:00 app[web.1]: [2020-06-24 15:13:02 +0000] [12] [INFO] Booting worker with pid: 12
+2020-06-24T15:13:02.279904+00:00 app[web.1]: Failed to find application object 'application' in 'dental'
+2020-06-24T15:13:02.280135+00:00 app[web.1]: [2020-06-24 15:13:02 +0000] [12] [INFO] Worker exiting (pid: 12)
+2020-06-24T15:13:02.389590+00:00 app[web.1]: [2020-06-24 15:13:02 +0000] [4] [INFO] Shutting down: Master
+2020-06-24T15:13:02.389709+00:00 app[web.1]: [2020-06-24 15:13:02 +0000] [4] [INFO] Reason: App failed to load.
+
+renamed root folder again to test
+
+2020-06-24T15:19:12.979986+00:00 app[api]: Release v19 created by user leroy.gardner@gmail.com
+2020-06-24T15:19:12.979986+00:00 app[api]: Deploy 8243f784 by user leroy.gardner@gmail.com
+2020-06-24T15:19:13.144830+00:00 heroku[web.1]: State changed from crashed to starting
+2020-06-24T15:19:22.359972+00:00 heroku[web.1]: Starting process with command `gunicorn -pythonpath application dental.wsgi`
+2020-06-24T15:19:24.469033+00:00 app[web.1]: [2020-06-24 15:19:24 +0000] [4] [INFO] Starting gunicorn 20.0.0
+2020-06-24T15:19:24.470319+00:00 app[web.1]: [2020-06-24 15:19:24 +0000] [4] [INFO] Listening at: http://0.0.0.0:32982 (4)
+2020-06-24T15:19:24.470408+00:00 app[web.1]: [2020-06-24 15:19:24 +0000] [4] [INFO] Using worker: sync
+2020-06-24T15:19:24.473845+00:00 app[web.1]: [2020-06-24 15:19:24 +0000] [11] [INFO] Booting worker with pid: 11
+2020-06-24T15:19:24.478001+00:00 app[web.1]: Failed to find application object 'application' in 'application'
+2020-06-24T15:19:24.478147+00:00 app[web.1]: [2020-06-24 15:19:24 +0000] [11] [INFO] Worker exiting (pid: 11)
+2020-06-24T15:19:24.505107+00:00 app[web.1]: [2020-06-24 15:19:24 +0000] [4] [INFO] Shutting down: Master
+2020-06-24T15:19:24.505191+00:00 app[web.1]: [2020-06-24 15:19:24 +0000] [4] [INFO] Reason: App failed to load.
+2020-06-24T15:19:24.562998+00:00 heroku[web.1]: Process exited with status 4
+2020-06-24T15:19:24.595237+00:00 heroku[web.1]: State changed from starting to crashed
+2020-06-24T15:19:32.000000+00:00 app[api]: Build succeeded
+2020-06-24T15:20:04.530198+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=drdentalwork.herokuapp.com request_id=d585afdd-cce4-4f0c-80fd-94bd81d0ea79 fwd="41.189.247.5" dyno= connect= service= status=503 bytes= protocol=https
+
