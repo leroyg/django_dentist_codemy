@@ -1,0 +1,46 @@
+https://stackoverflow.com/questions/48512013/couldnt-find-that-process-type-heroku
+
+https://stackoverflow.com/questions/16416172/how-can-i-modify-procfile-to-run-gunicorn-process-in-a-non-standard-folder-on-he
+
+1st error:
+
+ModuleNotFoundError: No module named 'dental.wsgi'
+
+I think fixed via adjusting my Procfile as below:
+
+web: gunicorn –pythonpath dental dental.wsgi –logfile
+
+My directory structure is below:
+
+Folder/	
+   dental / 
+		__init__.py
+		asgi.py
+		settings.py
+		urls.py
+		wsgi.py
+	static /
+	website /
+	manage.py
+	Procfile
+virtual/
+.gitignore
+requirements.txt
+
+New error:
+2020-06-23T19:00:48.000000+00:00 app[api]: Build succeeded
+2020-06-23T19:00:58.892421+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=drdentalwork.herokuapp.com request_id=0ac8f0d9-0d73-4f8e-bd7b-056cffdf8ca6 fwd="41.189.247.5" dyno= connect= service= status=503 bytes= protocol=https
+
+
+These two stackoverflow answers seem close to helping haha
+https://stackoverflow.com/questions/48512013/couldnt-find-that-process-type-heroku
+
+https://stackoverflow.com/questions/16416172/how-can-i-modify-procfile-to-run-gunicorn-process-in-a-non-standard-folder-on-he
+
+I found this and tried it to no success:
+heroku ps:scale web=1
+
+It returns this in my console
+Scaling dynos... !
+ ▸    Couldn't find that process type (web).
+
