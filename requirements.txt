@@ -132,7 +132,7 @@ pytz==2015.2
 PyYAML==5.1.2
 redis==3.3.11
 regex==2019.11.1
-requests==2.6.0
+requests==2.20.0
 requests-oauthlib==0.4.2
 simplejson==3.6.5
 six==1.9.0
