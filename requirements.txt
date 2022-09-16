@@ -82,7 +82,7 @@ jinja2-time==0.2.0
 jsmin==2.2.2
 lazy-object-proxy==1.4.3
 logilab-common==0.63.2
-Mako==1.1.0
+Mako==1.2.2
 Markdown==3.1.1
 MarkupSafe==0.23
 mccabe==0.6.1
